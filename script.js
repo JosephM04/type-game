@@ -38,7 +38,6 @@ const words = [
     'loving'
 ];
 
-
 // init word 
 let randomWord;
 
@@ -76,6 +75,8 @@ btnStart.addEventListener("click", () => {
         timeEl.innerHTML = time + 's';
     
         if (time == 0) {
+            word.innerHTML= "";
+            text.setAttribute("disabled","")
             timeEl.innerHTML = time;
             clearInterval(timeInterval);
             //end game
@@ -87,6 +88,9 @@ btnStart.addEventListener("click", () => {
 btnCLose.addEventListener("click", () => {
     endGameDiv.style.display = 'none';
     time = 5;
+    score = 0;
+    scoreEl.innerHTML = score;
+    timeEl.innerHTML = time;
     btnStart.style.display = "inline";
 })
 
@@ -122,7 +126,7 @@ function updateScore() {
 function gameOver() {
     endGameEl.innerHTML = `
     <h1> Time ran out </h1>
-    <p> Your final socre is ${score}</p>
+    <p> Your final score is ${score}</p>
     `;
     endGameDiv.style.display = 'flex';
 }
@@ -171,17 +175,13 @@ text.addEventListener('input', e => {
         e.target.value = '';
 
         if (difficulty === 'hard') { time += 1; }
-        else if (difficulty === 'medium') { time += 2; }
-        else { time += 3; }
+        else if (difficulty === 'medium') { time += 3; }
+        else { time += 8; }
     }
 });
-
-// Setting btn click 
-settingsBtn.addEventListener('click', () => settings.classList.toggle('hide'));
 
 // Setting select
 settingsForm.addEventListener('change', e => {
     difficulty = e.target.value;
     localStorage.setItem('difficulty', difficulty);
-
 });
