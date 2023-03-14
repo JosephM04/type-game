@@ -107,14 +107,51 @@ input {
     height: 100%;
 }
 
+.instructions {
+    margin:auto;
+    width: 80%;
+    border: 1px dashed #555;
+    margin-top: 15px;
+    padding:10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    background: #fafafa;  
+}
+.instructions>span {
+    font-size:15px; 
+    text-transform: uppercase;
+}
+
 .btn-start, .btn-close {
     padding: 10px 40px;
     margin: 50px;
     border:none;
     color:#fff;
     background-color:#333;
-    box-shadow: 4px 4px 0 #111;
+    box-shadow: 4px 4px 3px #111;
+   
 }
+
+.btn-start  {
+    animation: 1s infinite button;
+}
+
+@keyframes button {
+    0% {
+      /* pushes the sun down past the viewport */
+      box-shadow: 0 0 3px #111;
+    }
+    50% {
+      /* returns the sun to its default position */
+      box-shadow: 0 0 50px #a83636;
+    }
+    100% {
+        box-shadow: 0 0 3px #111;
+    }
+  }
+
+
 
 .btn-start:active, .btn-close:active {
     box-shadow:none;

@@ -42,7 +42,7 @@ const words = [
     "Algeria",
     "Andorra",
     "Angola",
-    "Antigua & Deps",
+    "Antigua and Deps",
     "Argentina",
     "Armenia",
     "Australia",
@@ -76,7 +76,7 @@ const words = [
     "Colombia",
     "Comoros",
     "Congo",
-    "Congo {Democratic Rep}",
+    "Congo Democratic Rep",
     "Costa Rica",
     "Croatia",
     "Cuba",
@@ -106,7 +106,7 @@ const words = [
     "Grenada",
     "Guatemala",
     "Guinea",
-    "Guinea-Bissau",
+    "Guinea Bissau",
     "Guyana",
     "Haiti",
     "Honduras",
@@ -116,7 +116,7 @@ const words = [
     "Indonesia",
     "Iran",
     "Iraq",
-    "Ireland {Republic}",
+    "Ireland Republic",
     "Israel",
     "Italy",
     "Ivory Coast",
@@ -158,7 +158,7 @@ const words = [
     "Montenegro",
     "Morocco",
     "Mozambique",
-    "Myanmar, {Burma}",
+    "Myanmar, Burma",
     "Namibia",
     "Nauru",
     "Nepal",
@@ -182,12 +182,12 @@ const words = [
     "Romania",
     "Russian Federation",
     "Rwanda",
-    "St Kitts & Nevis",
+    "St Kitts and Nevis",
     "St Lucia",
-    "Saint Vincent & the Grenadines",
+    "Saint Vincent and the Grenadines",
     "Samoa",
     "San Marino",
-    "Sao Tome & Principe",
+    "Sao Tome and Principe",
     "Saudi Arabia",
     "Senegal",
     "Serbia",
@@ -214,7 +214,7 @@ const words = [
     "Thailand",
     "Togo",
     "Tonga",
-    "Trinidad & Tobago",
+    "Trinidad and Tobago",
     "Tunisia",
     "Turkey",
     "Turkmenistan",
@@ -290,6 +290,7 @@ btnCLose.addEventListener("click", () => {
     scoreEl.innerHTML = score;
     timeEl.innerHTML = time;
     btnStart.style.display = "inline";
+    text.value = "";
 })
 
 // generate random word from array
